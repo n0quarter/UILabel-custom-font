@@ -3,10 +3,10 @@ UILabel-custom-font
 
 This class is a category for customizing `UILabel` font.
 By default used nice custom font `Corradine Fonts - Neuron` for plain text 
-and `Corradine Fonts - NeuronHeavy` for Bold, but you can easily change it.
+and `Corradine Fonts - NeuronHeavy` for bold text, but you can easily change it.
 
 The advantage of this solution is that you can change font of all UILabels in your project, 
-but disadvantage - this doesn't change SOME of your UILabels, it change ALL of your `UILabel`'s.
+but disadvantage - this doesn't change SOME of your UILabels, it change ALL of your UILabel's.
 
 ## Usage
 
@@ -34,4 +34,4 @@ for (NSString *name in [UIFont familyNames]) {
 ```
 with your custom font names.
 
-## Good Luck !
+And that's it.
