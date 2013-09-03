@@ -11,28 +11,24 @@
 #define BoldFontName  @"NeuronHeavy"
 #define PlainFontName @"Neuron"
 
-
 @implementation UILabel (myCustomFont)
 
-- (void)awakeFromNib {
+- (void) awakeFromNib {
     [super awakeFromNib];
-    
+    [self changeFont];
+}
+
+- (id) initWithFrame:(CGRect)frame {
+    id result = [super initWithFrame:frame];
+    if (result) [self changeFont];
+    return result;
+}
+
+- (void) changeFont {
     if ([self.font.fontName rangeOfString:@"bold"].length > 0 || [self.font.fontName rangeOfString:@"Bold"].length > 0)
         [self setFont:[UIFont fontWithName:BoldFontName size:self.font.pointSize]];
     else
         [self setFont:[UIFont fontWithName:PlainFontName size:self.font.pointSize]];
-    
-}
-
--(id)initWithFrame:(CGRect)frame {
-    id result = [super initWithFrame:frame];
-    if (result) {
-        if ([self.font.fontName rangeOfString:@"bold"].length > 0 || [self.font.fontName rangeOfString:@"Bold"].length > 0)
-            [self setFont:[UIFont fontWithName:BoldFontName size:self.font.pointSize]];
-        else
-            [self setFont:[UIFont fontWithName:PlainFontName size:self.font.pointSize]];
-    }
-    return result;
 }
 
 @end
