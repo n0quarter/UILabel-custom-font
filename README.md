@@ -29,13 +29,6 @@ for (NSString *name in [UIFont familyNames]) {
     }
 ```
 
-
-```objective-c
-	[UILabel test];
-```
-
-
-
 * Go to `UILabel+font.m` and change this lines
 
 ```objective-c
